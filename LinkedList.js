@@ -1,3 +1,21 @@
+
+//=== MAIN ===
+{
+	// variable annoucement and initialize
+	let head = new LinkedListNode('[ im head ]');
+	// insert element
+	for(let i=1;i<15;i++) 
+		head = addLink(head,i);
+	// print linked list
+	printLink(head);
+	// remove linked element in linked list
+	removeLink(head,1);
+	// print linked list
+	printLink(head);
+}
+//=== END MAIN ===
+
+//*** FUNCTION ***
 // linked list struct
 function LinkedListNode(data){
     this.data = data;
@@ -24,22 +42,9 @@ function removeLink(head, target){
 }
 // print linked list
 function printLink(head){
-	while(head!=null){ console.log(head.data); head=head.next; }
+	console.log('\n===== Print Link =====');
+	while(head!=null){ console.log('\t'+head.data); head=head.next; }
+	console.log('===== END print =====\n');
 }
+//*** END FUNCTION ***
 
-// MAIN 
-{
-	// variable annoucement and initialize
-	let head = new LinkedListNode('[ im head ]');
-	// insert element
-	for(let i=1;i<15;i++) 
-		head = addLink(head,i);
-	// print linked list
-	printLink(head);
-	console.log('==============');
-	// remove element in linked list
-	removeLink(head,1);
-	// print linked list
-	printLink(head);
-}
-// END MAIN
