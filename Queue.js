@@ -5,7 +5,7 @@
 	const list = [3,5,6,2,7,1,8];
 	let otherSpace= [];
 	let queue = new QueueNode('(im head)');
-		queue.pos = queue;
+		queue.pos = queue; // site for new node
 	// enqueue
 	for(let i in list) queue = enqueue(queue, list[i]);
 	// print
@@ -27,7 +27,6 @@
 // Queue struct
 function QueueNode(data){
     this.data = data;
-    this.pos = null; // site for new node
     this.next = null;	
 }
 // add element to queue
@@ -55,4 +54,3 @@ function printQueue(head){
 /* 
 * *** END_FUNCTION ***
 */
-
